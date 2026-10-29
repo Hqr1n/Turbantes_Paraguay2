@@ -1,2 +1,0 @@
-# Turbantes_Paraguay2
-
