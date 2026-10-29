@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 :root {
   color-scheme: light;
   --rosa-fondo: #fff7fa;
@@ -835,6 +842,40 @@ body.pagina-catalogo .detalle {
   margin: 0;
   color: #776c72;
   font-size: 0.9rem;
+
+  /* ===== NOTEBOOK CHICA - hasta 1024px ===== */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+  .contenido-principal {
+    margin-left: 200px;
+  }
+}
+
+/* ===== CELULAR - hasta 768px ===== */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: relative; /* Ya no queda fijo a la izquierda */
+    width: 100%; /* Ocupa todo el ancho */
+  }
+  .contenido-principal {
+    margin-left: 0; /* Quitamos el espacio del menú */
+  }
+  .grid-productos {
+    grid-template-columns: 1fr 1fr; /* 2 productos por fila */
+  }
+}
+
+/* ===== CELULAR CHICO - hasta 480px ===== */
+@media (max-width: 480px) {
+  .grid-productos {
+    grid-template-columns: 1fr; /* 1 producto por fila */
+  }
+}
 }
 
 body.pagina-catalogo .precio {
