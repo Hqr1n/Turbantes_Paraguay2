@@ -472,7 +472,6 @@ a {
   }
 }
 
-
 body.pagina-catalogo {
   color-scheme: light;
   --rosa-fondo: #fff7fa;
@@ -562,13 +561,13 @@ body.pagina-catalogo .enlaces-menu a {
 }
 
 body.pagina-catalogo .enlaces-menu a:hover,
-  body.pagina-catalogo .enlaces-menu a[aria-current="page"] {
+body.pagina-catalogo .enlaces-menu a[aria-current="page"] {
   background: var(--rosa-claro);
   color: #c2185b;
 }
 
 body.pagina-catalogo .btn-sidebar,
-  body.pagina-catalogo .boton {
+body.pagina-catalogo .boton {
   display: inline-block;
   border-radius: 24px;
   font-weight: 700;
@@ -586,6 +585,10 @@ body.pagina-catalogo .btn-sidebar {
 }
 
 body.pagina-catalogo .contenido-principal {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin-left: 250px;
   padding: 34px clamp(20px, 5vw, 64px) 0;
 }
 
@@ -715,7 +718,7 @@ body.pagina-catalogo .producto-sin-imagen {
 }
 
 body.pagina-catalogo .selector-mono,
-  body.pagina-catalogo .selector-turbante {
+body.pagina-catalogo .selector-turbante {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
@@ -738,17 +741,17 @@ body.pagina-catalogo .opcion-color {
 }
 
 body.pagina-catalogo .opcion-rosa-palo,
-  body.pagina-catalogo .opcion-turbante-fucsia {
+body.pagina-catalogo .opcion-turbante-fucsia {
   grid-column: 1;
 }
 
 body.pagina-catalogo .opcion-tinto,
-  body.pagina-catalogo .opcion-turbante-rojo {
+body.pagina-catalogo .opcion-turbante-rojo {
   grid-column: 2;
 }
 
 body.pagina-catalogo .opcion-marron,
-  body.pagina-catalogo .opcion-turbante-azul {
+body.pagina-catalogo .opcion-turbante-azul {
   grid-column: 3;
 }
 
@@ -774,16 +777,16 @@ body.pagina-catalogo .radio-color-mono:focus-visible + .opcion-color {
 }
 
 body.pagina-catalogo .mono-imagenes,
-  body.pagina-catalogo .mono-corto-imagenes,
-  body.pagina-catalogo .turbante-imagenes {
+body.pagina-catalogo .mono-corto-imagenes,
+body.pagina-catalogo .turbante-imagenes {
   grid-column: 1 / -1;
   grid-row: 1;
   height: 205px;
 }
 
 body.pagina-catalogo .mono-imagenes img,
-  body.pagina-catalogo .mono-corto-imagenes img,
-  body.pagina-catalogo .turbante-imagenes img {
+body.pagina-catalogo .mono-corto-imagenes img,
+body.pagina-catalogo .turbante-imagenes img {
   display: none;
   width: 100%;
   height: 205px;
@@ -792,28 +795,28 @@ body.pagina-catalogo .mono-imagenes img,
 }
 
 body.pagina-catalogo .turbante-imagenes .imagen-turbante-original,
-  body.pagina-catalogo .mono-corto-imagenes .imagen-mono-corto-principal {
+body.pagina-catalogo .mono-corto-imagenes .imagen-mono-corto-principal {
   display: block;
 }
 
 body.pagina-catalogo #turbante-fucsia:checked ~ .turbante-imagenes .imagen-turbante-original,
-  body.pagina-catalogo #turbante-rojo:checked ~ .turbante-imagenes .imagen-turbante-original,
-  body.pagina-catalogo #turbante-azul:checked ~ .turbante-imagenes .imagen-turbante-original,
-  body.pagina-catalogo #mono-corto-blanco:checked ~ .mono-corto-imagenes .imagen-mono-corto-principal,
-  body.pagina-catalogo #mono-corto-rosado:checked ~ .mono-corto-imagenes .imagen-mono-corto-principal,
-  body.pagina-catalogo #mono-corto-dorado:checked ~ .mono-corto-imagenes .imagen-mono-corto-principal {
+body.pagina-catalogo #turbante-rojo:checked ~ .turbante-imagenes .imagen-turbante-original,
+body.pagina-catalogo #turbante-azul:checked ~ .turbante-imagenes .imagen-turbante-original,
+body.pagina-catalogo #mono-corto-blanco:checked ~ .mono-corto-imagenes .imagen-mono-corto-principal,
+body.pagina-catalogo #mono-corto-rosado:checked ~ .mono-corto-imagenes .imagen-mono-corto-principal,
+body.pagina-catalogo #mono-corto-dorado:checked ~ .mono-corto-imagenes .imagen-mono-corto-principal {
   display: none;
 }
 
 body.pagina-catalogo #turbante-fucsia:checked ~ .turbante-imagenes .imagen-turbante-fucsia,
-  body.pagina-catalogo #turbante-rojo:checked ~ .turbante-imagenes .imagen-turbante-rojo,
-  body.pagina-catalogo #turbante-azul:checked ~ .turbante-imagenes .imagen-turbante-azul,
-  body.pagina-catalogo #mono-rosa-palo:checked ~ .mono-imagenes .imagen-rosa-palo,
-  body.pagina-catalogo #mono-tinto:checked ~ .mono-imagenes .imagen-tinto,
-  body.pagina-catalogo #mono-marron:checked ~ .mono-imagenes .imagen-marron,
-  body.pagina-catalogo #mono-corto-blanco:checked ~ .mono-corto-imagenes .imagen-mono-corto-blanco,
-  body.pagina-catalogo #mono-corto-rosado:checked ~ .mono-corto-imagenes .imagen-mono-corto-rosado,
-  body.pagina-catalogo #mono-corto-dorado:checked ~ .mono-corto-imagenes .imagen-mono-corto-dorado {
+body.pagina-catalogo #turbante-rojo:checked ~ .turbante-imagenes .imagen-turbante-rojo,
+body.pagina-catalogo #turbante-azul:checked ~ .turbante-imagenes .imagen-turbante-azul,
+body.pagina-catalogo #mono-rosa-palo:checked ~ .mono-imagenes .imagen-rosa-palo,
+body.pagina-catalogo #mono-tinto:checked ~ .mono-imagenes .imagen-tinto,
+body.pagina-catalogo #mono-marron:checked ~ .mono-imagenes .imagen-marron,
+body.pagina-catalogo #mono-corto-blanco:checked ~ .mono-corto-imagenes .imagen-mono-corto-blanco,
+body.pagina-catalogo #mono-corto-rosado:checked ~ .mono-corto-imagenes .imagen-mono-corto-rosado,
+body.pagina-catalogo #mono-corto-dorado:checked ~ .mono-corto-imagenes .imagen-mono-corto-dorado {
   display: block;
 }
 
@@ -885,12 +888,12 @@ body.pagina-catalogo .pie-contenido {
 }
 
 body.pagina-catalogo .pie-contenido h2,
-  body.pagina-catalogo .pie-contenido p {
+body.pagina-catalogo .pie-contenido p {
   margin: 0;
 }
 
 body.pagina-catalogo .pie-contenido p,
-  body.pagina-catalogo .copyright {
+body.pagina-catalogo .copyright {
   color: #f2dce5;
 }
 
@@ -954,9 +957,9 @@ body.pagina-catalogo .copyright {
   }
 
   body.pagina-catalogo .contenido-principal {
+    margin-left: 0;
     padding-top: 24px;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -967,5 +970,4 @@ body.pagina-catalogo .copyright {
   body.pagina-catalogo .pie-contenido {
     flex-direction: column;
   }
-
 }
